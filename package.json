@@ -1,0 +1,32 @@
+{
+  "name": "gem-study-tool",
+  "version": "1.0.0",
+  "description": "A studying tool designed to help people find information on precious stones",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timegated/gem-study-tool.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/timegated/gem-study-tool/issues"
+  },
+  "homepage": "https://github.com/timegated/gem-study-tool#readme",
+  "dependencies": {
+    "puppeteer": "^5.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.5.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1"
+  }
+}

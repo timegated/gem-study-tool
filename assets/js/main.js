@@ -1,17 +1,18 @@
-const gemContainer = document.querySelector(".gems__container");
-let gems = document.createElement("h1");
+const gemContainer = document.querySelector('.gems__container');
+const gemNames = ['Appatite', 'Ruby', 'Diamond', 'Emerald', 'Sapphire'];
+
+// simulate API call
+function generateGemCards (num, text) {
+  if (num <= 0) return
+  const gemCard = document.createElement('div')
+  gemCard.className = 'gem__card'
+  gemCard.innerHTML = `<a href='#!' class='gem__link'>${gemNames[Math.floor(Math.random() * gemNames.length)]}</a>`
+  gemContainer.appendChild(gemCard)
+  // eslint-disable-next-line
+  return generateGemCards(num - 1, text)
+};
 
 
-
-function generateGems (num, html) {
-  if (num <= 0) {
-    return
-  }
-  console.log(num)
-  gems.textContent = html;
-  console.log(gems)
-  const child = gemContainer.appendChild(gems);
-  return generateGems(num - 1, html, child);
-}
-
-generateGems(10, "Appatite");
+// setTimeout(() => {
+//   generateGemCards(20, 'Appatite')
+// }, 2000);
