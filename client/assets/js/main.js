@@ -1,3 +1,5 @@
+import { getGemLinks } from './modules/data.js'
+
 const gemContainer = document.querySelector('.gems__container');
 const gemNames = ['Appatite', 'Ruby', 'Diamond', 'Emerald', 'Sapphire'];
 
@@ -12,7 +14,8 @@ function generateGemCards (num, text) {
   return generateGemCards(num - 1, text)
 };
 
+setTimeout(() => {
+  generateGemCards(20, 'Appatite')
+}, 2000)
 
-// setTimeout(() => {
-//   generateGemCards(20, 'Appatite')
-// }, 2000);
+getGemLinks()
