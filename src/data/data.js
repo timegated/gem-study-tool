@@ -1,20 +1,21 @@
-import puppeteer from 'puppeteer'
+const puppeteer = require('puppeteer')
 
-export const getGemLinks = async () => {
+const getGemLinks = async (url) => {
   try {
-    const browser = await puppeteer.launch({ headless: false })
+    const browser = await puppeteer.launch({ headless: true })
     const page = await browser.newPage()
+    await page.goto(url)
 
-    await page.goto('https://www.gemdat.org/gemindex.php')
-    await page.waitForSelector('li')
+    const [el] = await page.$x('//*[@id="gdwrap"]/div[2]/div[1]/table/tbody/tr/td[1]/ul/li[1]/a')
 
-    const links = await page.evaluate(() => {
-      const aLinks = document.querySelectorAll('li>a')
-      return aLinks
-    })
-    console.log(JSON.stringify(links))
+    const href = await el.getProperty('href')
+    const hrefTxt = await href.jsonValue()
+
+    console.log({ hrefTxt })
+    console.log(el)
     await browser.close()
   } catch (error) {
     console.error(error)
   }
 }
+getGemLinks('https://www.gemdat.org/gemindex.php')

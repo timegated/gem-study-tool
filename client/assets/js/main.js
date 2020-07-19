@@ -1,7 +1,7 @@
 import { getGemLinks } from './modules/data.js'
 
-const gemContainer = document.querySelector('.gems__container');
-const gemNames = ['Appatite', 'Ruby', 'Diamond', 'Emerald', 'Sapphire'];
+const gemContainer = document.querySelector('.gems__container')
+const gemNames = ['Appatite', 'Ruby', 'Diamond', 'Emerald', 'Sapphire']
 
 // simulate API call
 function generateGemCards (num, text) {
