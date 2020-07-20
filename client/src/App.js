@@ -3,7 +3,7 @@ import React from 'react';
 const App = () => {
   return (
     <div>
-      <h1>Welcome</h1>
+      <h1>Gem Study Tool</h1>
     </div>
   );
 };
