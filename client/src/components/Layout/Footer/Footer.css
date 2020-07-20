@@ -1,0 +1,15 @@
+.footerContent {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: black;
+  box-shadow: 5px black;
+}
+
+.footerText {
+  color: #efefef;
+  font-size: 18px;
+  text-align: center;
+}

@@ -16,6 +16,12 @@ app.get('/', (req, res) => {
   res.send({ msg: 'Hello from the server' });
 });
 
+app.use('/api', router);
+
+router.get('/test', (req, res) => {
+  res.send({ msg: 'Test route works when requested from website' });
+});
+
 const PORT = 5000;
 
 const start = async () => {
