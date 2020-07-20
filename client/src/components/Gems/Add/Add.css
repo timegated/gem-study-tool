@@ -1,0 +1,21 @@
+.addContent {
+  display: flex;
+  flex-direction: column;
+  margin: 5rem auto;
+  color: black;
+  background: #FFDDCC;
+  padding: 4rem;
+  width: 50%;
+}
+
+.addContent h4 {
+  text-align: center;
+}
+
+input {
+  font-size: 24px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 1px 1px 1px 1px black;
+  margin: 0.5rem;
+}
