@@ -1,12 +1,15 @@
 .homeContent {
+  background: #FFDDCC;
+  border-radius: 18px;
+  box-shadow: 1px 1px 1px 1px black;
   margin: 5rem;
+  padding: 5rem;
 }
 
 .title {
-  background: purple;
-  color: #efefef;
+  color: #220033;
   font-size: 36px;
-  width: 100%;
+  width: 50%;
   text-align: center;
 }
 

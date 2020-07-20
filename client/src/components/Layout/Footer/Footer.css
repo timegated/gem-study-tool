@@ -4,12 +4,12 @@
   width: 100%;
   margin: 0;
   padding: 0;
-  background: black;
+  background: #FFCCB3;
   box-shadow: 5px black;
 }
 
 .footerText {
-  color: #efefef;
+  color: #220033;
   font-size: 18px;
   text-align: center;
 }

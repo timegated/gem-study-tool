@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Markazi+Text&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -8,4 +9,5 @@ html, body {
   margin: 0;
   padding: 0;
   background: #efefef;
+  font-family: 'Makazi Text', sans-serif;
 }

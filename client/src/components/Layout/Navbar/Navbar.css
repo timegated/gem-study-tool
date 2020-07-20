@@ -6,9 +6,10 @@
 	width: 100%;
 	height: 56px;
 	padding: 0;
-	background: #001A0D;
+	background: #FFDDCC;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-	z-index: 50;
+  z-index: 50;
+  font-family: 'Hammersmith One', sans-serif;
 }
 
 .header h1 {
@@ -18,7 +19,7 @@
 	font-size: 36px;
 	line-height: 56px;
 	font-weight: 400;
-	color: #FFF;
+	color: #220033;
 }
 
 .header nav {
@@ -34,18 +35,17 @@
 	padding: 0 15px;
 	min-width: 50px;
 	text-align: center;
-	background: rgba(255,255,255,0);
 	text-decoration: none;
-	color: #FFF;
+	color: #220033;
 	will-change: background-color;
 }
 
 .header nav a:hover,
 .header nav a:active {
-	background: #00264D;
+	background: #FFCCB3;
 	text-decoration: underline;
 }
 
 .header nav a.active {
-	background: #00264D;
+	background: #FFCCB3;
 }

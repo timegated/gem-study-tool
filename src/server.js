@@ -18,9 +18,6 @@ app.get('/', (req, res) => {
 
 app.use('/api', router);
 
-router.get('/test', (req, res) => {
-  res.send({ msg: 'Test route works when requested from website' });
-});
 
 const PORT = 5000;
 

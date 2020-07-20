@@ -7,13 +7,15 @@ module.exports = {
         new webpack.HotModuleReplacementPlugin(),
         new HtmlWebpackPlugin({ template: './src/index.html' })
     ],
-    entry: ['@babel/polyfill', path.join(__dirname, 'src', 'index.js')],
+    entry: ['@babel/polyfill/noConflict', path.join(__dirname, 'src', 'index.js')],
     output: {
         path: path.join(__dirname, './dist'),
         filename: 'bundle.js'
     },
+    devtool: 'inline-source-map',
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
+        historyApiFallback: true,
         open: true,
         clientLogLevel: 'silent',
         port: 8080,

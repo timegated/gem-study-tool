@@ -1,0 +1,19 @@
+.aboutContent {
+  margin: 5rem auto;
+  width: 850px;
+  background: black;
+  border-radius: 24px;
+  box-shadow: 5px 5px 5px 5px black;
+  color: white;
+  padding: 10rem;
+}
+
+.title {
+  text-align: center;
+}
+
+.blurb {
+  font-size: 18px;
+  color: white;
+  text-align: center;
+}
