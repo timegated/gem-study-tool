@@ -6,16 +6,39 @@
   background: #FFDDCC;
   padding: 4rem;
   width: 50%;
+  border-radius: 18px;
+  box-shadow: 1px 1px 1px 1px black;
 }
 
-.addContent h4 {
+.addContent h1 {
   text-align: center;
 }
 
-input {
+.inputGroup {
   font-size: 24px;
   border-radius: 10px;
   border: none;
   box-shadow: 1px 1px 1px 1px black;
-  margin: 0.5rem;
+  margin: 1rem;
+  padding: 0.5rem;
+}
+
+.submitButton {
+  display: inline-block;
+  background: #f8aa82;
+  font-size: 18px;
+  font-weight: bold;
+  color: #2c2c2c;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px 1px #2c2c2c;
+}
+input[type="text"] {
+  display: block;
+  width: 100%;
+  padding: 0.4rem;
+  font-size: 24px;
+  border: 1px solid #2c2c2c;
+  border-radius: 10px;
 }
