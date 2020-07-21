@@ -11,15 +11,15 @@ const Add = () => {
     const { name, color, opacity } = element;
 
     const addGem = (e) => {
-        console.log(e);
+        console.log(element);
         e.preventDefault();
     };
 
     const onChange = (e) => {
         setElement({ ...element, [e.target.name]: e.target.value });
+        console.log(element);
     };
 
-    console.log(typeof form);
     return (
         <div className={styles.addContent}>
             <h1>Add a Gem</h1>
