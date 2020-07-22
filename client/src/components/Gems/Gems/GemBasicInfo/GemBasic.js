@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import GemCard from './GemBasicCard';
 import styles from './GemBasic.css';
 
 const GemBasic = () => {
@@ -13,10 +14,14 @@ const GemBasic = () => {
     getBasicData();
   }, []);
   console.log(data);
-  
+
   return (
-    <div className={styles.gemBasicContent}>
-      <h1>Gem Basic Info</h1>
+    <div className={styles.basicContainer}>
+      <h1>Basic Info</h1>
+      <div className={styles.gemBasicContent}>
+
+        <GemCard data={data} />
+      </div>
     </div>
   );
 };

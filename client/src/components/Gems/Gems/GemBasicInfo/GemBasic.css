@@ -1,4 +1,26 @@
-.gemBasicContent {
+.basicContainer {
   margin: 5rem auto;
-  background: hsl(20, 100%, 90%);
+  text-align: center;
+  max-width: 1200px;
+}
+
+.gemBasicContent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.gemCard {
+  margin: 1rem;
+  flex: 1 0 25%;
+  border: 1px solid black;
+}
+
+.gemCardTitle {
+  text-decoration: underline;
+  padding-left: 1rem;
+}
+
+.gemCardContent p {
+  font-size: 20px;
 }
