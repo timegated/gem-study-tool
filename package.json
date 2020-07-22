@@ -4,9 +4,10 @@
   "description": "A studying tool designed to help people find information on precious stones",
   "main": "index.js",
   "scripts": {
+    "build":"babel src --out-dir dist",
     "format": "prettier --write \"src/**/*.js\"",
-    "start": "node ./src/server.js",
-    "server": "nodemon ./src/server.js",
+    "start": "node dist/server.js",
+    "server": "nodemon dist/server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
@@ -33,6 +34,14 @@
     "puppeteer": "^5.2.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^26.1.0",
     "concurrently": "^5.2.0",
     "eslint": "^7.5.0",
     "eslint-config-prettier": "^6.11.0",

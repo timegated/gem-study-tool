@@ -1,7 +1,9 @@
-const express = require('express');
-const { json, urlencoded } = require('body-parser');
-const morgan = require('morgan');
-const cors = require('cors');
+import express from 'express';
+import { json, urlencoded } from 'body-parser';
+import morgan from 'morgan';
+import cors from 'cors';
+import { connect } from './utils/db';
+import config from './config';
 const app = express();
 const router = express.Router();
 
@@ -19,10 +21,11 @@ app.get('/', (req, res) => {
 app.use('/api', router);
 
 
-const PORT = 5000;
+const PORT = process.env.NODE_ENV || 3000;
 
 const start = async () => {
   try {
+    await connect();
     app.listen(PORT, () => {
       console.log(`Server running on port: ${PORT}`);
     });
