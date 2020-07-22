@@ -33,15 +33,20 @@ const Basic = () => {
 
   return (
     <div className={styles.addContent}>
-      <h1>Add a Gem</h1>
+      <h1>Basic Info</h1>
       <form onSubmit={onSubmit}>
         <div className={styles.inputGroup}>
           <label htmlFor="Name">Name</label>
           <input type="text" name="name" value={name} onChange={onChange} />
         </div>
         <div className={styles.inputGroup}>
-          <label htmlFor="Color">Color</label>
-          <input type="text" name="color" value={species} onChange={onChange} />
+          <label htmlFor="Species">Species</label>
+          <input
+            type="text"
+            name="species"
+            value={species}
+            onChange={onChange}
+          />
         </div>
         <div className={styles.inputGroup}>
           <label htmlFor="Variety">Variety</label>

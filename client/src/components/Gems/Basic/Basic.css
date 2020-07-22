@@ -5,7 +5,6 @@
   color: black;
   background: #FFDDCC;
   padding: 4rem;
-  width: 50%;
   border-radius: 18px;
   box-shadow: 1px 1px 1px 1px black;
 }
@@ -42,3 +41,6 @@ input[type="text"] {
   border: 1px solid #2c2c2c;
   border-radius: 10px;
 }
+
+
+@media and max-width()
