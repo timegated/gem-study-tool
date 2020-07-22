@@ -20,7 +20,6 @@ app.get('/', (req, res) => {
 
 app.use('/api', router);
 
-
 const PORT = process.env.NODE_ENV || 3000;
 
 const start = async () => {

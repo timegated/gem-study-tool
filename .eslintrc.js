@@ -1,15 +1,27 @@
 module.exports = {
-    'env': {
-        'browser': true,
-        'commonjs': true,
-        'es2020': true
-    },
-    'extends': 'eslint:recommended',
-    'parserOptions': {
-        'ecmaVersion': 11
-    },
-    'rules': {
-        'semi': ['error', 'always'],
-        'quotes':['error', 'single']
-    }
+  parserOptions: {
+    sourceType: 'module',
+  },
+  parser: 'babel-eslint',
+  env: {
+    node: true,
+  },
+  extends: [
+    'standard',
+    'prettier',
+    'prettier/standard',
+    'plugin:jest/recommended',
+  ],
+  plugins: ['prettier', 'jest'],
+  rules: {
+    'promise/catch-or-return': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        singleQuote: true,
+        semi: true,
+        endOfLine: 'auto',
+      },
+    ],
+  },
 };
