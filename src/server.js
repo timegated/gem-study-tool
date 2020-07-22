@@ -22,11 +22,11 @@ app.get('/', (req, res) => {
   res.send({ msg: 'Hello from the server' });
 });
 
-app.use('/api', router);
-app.use('/api/color', colorRouter);
-app.use('/api/basic', basicRouter);
-app.use('/api/misc', miscRouter);
-app.use('/api/source', sourceRouter);
+app.use('/', router);
+app.use('/color', colorRouter);
+app.use('/basic', basicRouter);
+app.use('/misc', miscRouter);
+app.use('/source', sourceRouter);
 
 const PORT = process.env.NODE_ENV || 3000;
 

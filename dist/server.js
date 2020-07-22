@@ -37,11 +37,11 @@ app.get('/', (req, res) => {
     msg: 'Hello from the server'
   });
 });
-app.use('/api', router);
-app.use('/api/color', _color.default);
-app.use('/api/basic', _basic.default);
-app.use('/api/misc', _misc.default);
-app.use('/api/source', _source.default);
+app.use('/', router);
+app.use('/color', _color.default);
+app.use('/basic', _basic.default);
+app.use('/misc', _misc.default);
+app.use('/source', _source.default);
 const PORT = process.env.NODE_ENV || 3000;
 
 const start = async () => {

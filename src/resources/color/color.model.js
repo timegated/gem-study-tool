@@ -1,6 +1,9 @@
 import mongoose from 'mongoose';
 
 const colorSchema = new mongoose.Schema({
+  name: {
+    type: String,
+  },
   colorAgent: {
     type: String,
   },

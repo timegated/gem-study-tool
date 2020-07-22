@@ -9,9 +9,10 @@ export const getMany = (model) => async (req, res) => {
 export const createOne = (model) => async (req, res) => {
   console.log(req.body);
   try {
-    const res = await model.create(req.body);
-    res.status(201).json(res);
+    const doc = await model.create(req.body);
+    res.status(201).json({ data: doc });
   } catch (error) {
+    console.error(error);
     res.status(400).end();
   }
 };
