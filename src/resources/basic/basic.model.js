@@ -1,13 +1,11 @@
 import mongoose from 'mongoose';
 
-const gemSchema = new mongoose.Schema({
+const basicSchema = new mongoose.Schema({
   name: {
     type: String,
-    required: true,
   },
   species: {
     type: String,
-    required: true,
   },
   variety: {
     type: String,
@@ -23,4 +21,4 @@ const gemSchema = new mongoose.Schema({
   },
 });
 
-export const Gems = mongoose.model('gem', gemSchema);
+export const Basic = mongoose.model('basic', basicSchema);

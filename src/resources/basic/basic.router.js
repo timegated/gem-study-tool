@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { Router } from 'express';
-import controllers from './color.controllers';
+import controllers from './basic.controllers';
 
 const router = Router();
 
@@ -11,4 +11,6 @@ router.route('/')
 router.route('/:id')
   .get(controllers.getOne)
   .put(controllers.updateOne)
-  .delete (controllers.deleteOne);
+  .delete(controllers.deleteOne);
+  
+export default router;
