@@ -1,4 +1,16 @@
 .gemContent {
   margin: 5rem auto;
   color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.gemContent a {
+  margin: 1rem;
+  text-decoration: none;
+  padding: 1rem;
+  font-size: 24px;
+  background: #2c2c2c;
+  color: #FFDDCC;
+  box-shadow: 1px 1px 1px 1px #2c2c2c;
 }

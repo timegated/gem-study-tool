@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import Basic from '../Basic/Basic';
+import BasicAdd from '../Basic/BasicAdd';
 import styles from './Add.css';
 
 const Add = () => {
   return (
     <div className={styles.addContent}>
-      <Basic />
+      <BasicAdd />
     </div>
   );
 };

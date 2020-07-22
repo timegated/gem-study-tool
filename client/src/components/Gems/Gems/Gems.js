@@ -1,12 +1,18 @@
 import React from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 import styles from './Gems.css';
 
 const Gems = () => {
-    return (
-        <div className={styles.gemContent}>
-            <h1>Gems</h1>
-        </div>
-    );
+
+  return (
+    <div className={styles.gemContent}>
+          <Link to='/gembasic' className={styles.gemLinks} href="#!">Basic Info</Link>
+          <Link className={styles.gemLinks} href="#!">Color Info</Link>
+          <Link className={styles.gemLinks} href="#!">Misc Info</Link>
+          <Link className={styles.gemLinks} href="#!">Source Info</Link>
+    </div>
+  );
 };
 
 export default Gems;

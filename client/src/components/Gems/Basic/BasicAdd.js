@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import styles from './Basic.css';
+import styles from './BasicAdd.css';
 
 const Basic = () => {
   const [basicInfo, setBasicInfo] = useState({
@@ -19,7 +19,7 @@ const Basic = () => {
   };
 
   const onSubmit = (e) => {
-    axios.post('/basic', basicInfo);
+    axios.post('/api/basic', basicInfo);
     setBasicInfo({
       name: '',
       species: '',
