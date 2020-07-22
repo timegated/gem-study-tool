@@ -3,7 +3,11 @@ import { json, urlencoded } from 'body-parser';
 import morgan from 'morgan';
 import cors from 'cors';
 import { connect } from './utils/db';
-import config from './config';
+// import config from './config';
+import colorRouter from './resources/color/color.router';
+import basicRouter from './resources/basic/basic.router';
+import miscRouter from './resources/misc/misc.router';
+import sourceRouter from './resources/source/source.router';
 const app = express();
 const router = express.Router();
 
@@ -19,6 +23,10 @@ app.get('/', (req, res) => {
 });
 
 app.use('/api', router);
+app.use('/api/color', colorRouter);
+app.use('/api/basic', basicRouter);
+app.use('/api/misc', miscRouter);
+app.use('/api/source', sourceRouter);
 
 const PORT = process.env.NODE_ENV || 3000;
 

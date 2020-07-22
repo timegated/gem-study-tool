@@ -30,7 +30,7 @@ const colorSchema = new mongoose.Schema({
   },
   cut: {
     type: String,
-  }
+  },
 });
 
 export const Color = mongoose.model('color', colorSchema);
