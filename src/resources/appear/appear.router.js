@@ -1,6 +1,6 @@
 /* eslint-disable prettier/prettier */
 import { Router } from 'express';
-import controllers from './color.controllers';
+import controllers from './appear.controllers';
 
 const router = Router();
 

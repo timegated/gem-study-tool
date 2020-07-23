@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const colorSchema = new mongoose.Schema({
+const appearSchema = new mongoose.Schema({
   name: {
     type: String,
   },
@@ -8,6 +8,9 @@ const colorSchema = new mongoose.Schema({
     type: String,
   },
   caEffects: {
+    type: String,
+  },
+  phen: {
     type: String,
   },
   color: {
@@ -36,4 +39,4 @@ const colorSchema = new mongoose.Schema({
   },
 });
 
-export const Color = mongoose.model('color', colorSchema);
+export const Appear = mongoose.model('appear', appearSchema);

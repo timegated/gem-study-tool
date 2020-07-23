@@ -1,4 +1,4 @@
 import { crudControllers } from '../../utils/crud';
-import { Color } from './color.model';
+import { Color } from './appear.model';
 
 export default crudControllers(Color);

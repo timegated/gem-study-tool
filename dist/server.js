@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
   });
 });
 app.use('/api', router);
-app.use('/api/color', _color.default);
+app.use('/api/appear', _color.default);
 app.use('/api/basic', _basic.default);
 app.use('/api/misc', _misc.default);
 app.use('/api/source', _source.default);

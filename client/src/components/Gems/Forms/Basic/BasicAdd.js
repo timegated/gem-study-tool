@@ -1,85 +1,98 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import styles from './BasicAdd.css';
+import { createArr } from '../../../../utils/elementsArray';
+import Input from '../../../Layout/Input/Input';
+import style from './BasicAdd.css';
 
 const Basic = () => {
   const [basicInfo, setBasicInfo] = useState({
-    name: '',
-    species: '',
-    variety: '',
-    crystal: '',
-    habit: '',
-    chemical: '',
+    name: {
+      elType: 'input',
+      elConfig: {
+        type: 'text',
+        placeholder: 'gem name',
+      },
+      value: '',
+    },
+    species: {
+      elType: 'input',
+      elConfig: {
+        type: 'text',
+        placeholder: 'species',
+      },
+      value: '',
+    },
+    variety: {
+      elType: 'input',
+      elConfig: {
+        type: 'text',
+        placeholder: 'variety',
+      },
+      value: '',
+    },
+    crystal: {
+      elType: 'input',
+      elConfig: {
+        type: 'text',
+        placeholder: 'crystal',
+      },
+      value: '',
+    },
+    habit: {
+      elType: 'input',
+      elConfig: {
+        type: 'text',
+        placeholder: 'habit',
+      },
+      value: '',
+    },
+    chemical: {
+      elType: 'input',
+      elConfig: {
+        type: 'text',
+        placeholder: 'chemical',
+      },
+      value: '',
+    },
   });
 
-  const { name, species, variety, crystal, habit, chemical } = basicInfo;
 
-  const onChange = (e) => {
-    setBasicInfo({ ...basicInfo, [e.target.name]: e.target.value });
+  const onChange = (e, elId) => {
+    const updatedBasicInfo = {
+      ...basicInfo,
+    };
+    const updatedFormEl = {
+      ...updatedBasicInfo[elId],
+    };
+    updatedFormEl.value = e.target.value;
+    updatedBasicInfo[elId] = updatedFormEl;
+    setBasicInfo(updatedBasicInfo);
   };
 
   const onSubmit = (e) => {
     axios.post('/api/basic', basicInfo);
-    setBasicInfo({
-      name: '',
-      species: '',
-      variety: '',
-      crystal: '',
-      habit: '',
-      chemical: '',
-    });
     e.preventDefault();
   };
 
+  // from utils
+  const elArr = createArr(basicInfo);
+
   return (
-    <div className={styles.addContent}>
+    <div className={style.addContent}>
       <h1>Basic Info</h1>
       <form onSubmit={onSubmit}>
-        <div className={styles.inputGroup}>
-          <label htmlFor="Name">Name</label>
-          <input type="text" name="name" value={name} onChange={onChange} />
-        </div>
-        <div className={styles.inputGroup}>
-          <label htmlFor="Species">Species</label>
-          <input
-            type="text"
-            name="species"
-            value={species}
-            onChange={onChange}
-          />
-        </div>
-        <div className={styles.inputGroup}>
-          <label htmlFor="Variety">Variety</label>
-          <input
-            type="text"
-            name="variety"
-            value={variety}
-            onChange={onChange}
-          />
-        </div>
-        <div className={styles.inputGroup}>
-          <label htmlFor="Crystal">Crystal</label>
-          <textarea
-            type="text"
-            name="crystal"
-            value={crystal}
-            onChange={onChange}
-          />
-        </div>
-        <div className={styles.inputGroup}>
-          <label htmlFor="Habit">Habit</label>
-          <input type="text" name="habit" value={habit} onChange={onChange} />
-        </div>
-        <div className={styles.inputGroup}>
-          <label htmlFor="Chemical">Chemical</label>
-          <input
-            type="text"
-            name="chemical"
-            value={chemical}
-            onChange={onChange}
-          />
-        </div>
-        <button className={styles.submitButton}>Submit</button>
+        {elArr.map((el) => {
+          return (
+            <Input
+              key={el.id}
+              elType={el.config.elType}
+              elConfig={el.config.elConfig}
+              value={el.config.value}
+              changed={(e) => onChange(e, el.id)}
+            />
+         )
+       })}
+        <button className={style.submitButton}>Submit</button>
       </form>
     </div>
   );

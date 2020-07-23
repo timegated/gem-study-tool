@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import BasicAdd from '../Forms/Basic/BasicAdd';
+import Appearance from '../Forms/Appearance/Appearance';
 import styles from './Add.css';
 
 const Add = () => {
@@ -24,6 +25,7 @@ const Add = () => {
         <option value={source}>Source</option>
       </select>
       {select === 'Basic' ? <BasicAdd /> : console.error('error')}
+      {select === 'Appearance' ? <Appearance /> : console.error('error')}
     </div>
   );
 };
