@@ -59,7 +59,7 @@ const Basic = () => {
         </div>
         <div className={styles.inputGroup}>
           <label htmlFor="Crystal">Crystal</label>
-          <input
+          <textarea
             type="text"
             name="crystal"
             value={crystal}

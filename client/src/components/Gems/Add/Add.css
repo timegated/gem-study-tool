@@ -34,7 +34,7 @@
   cursor: pointer;
   box-shadow: 1px 1px 1px 1px #2c2c2c;
 }
-input[type="text"] {
+input[type="text"], textarea, select{
   display: block;
   width: 100%;
   padding: 0.4rem;
