@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import BasicAdd from '../Forms/Basic/BasicAdd';
 import Appearance from '../Forms/Appearance/Appearance';
+import Misc from '../Forms/Misc/Misc';
+import Source from '../Forms/Source/Source';
 import styles from './Add.css';
 
 const Add = () => {
@@ -26,6 +28,8 @@ const Add = () => {
       </select>
       {select === 'Basic' ? <BasicAdd /> : console.error('error')}
       {select === 'Appearance' ? <Appearance /> : console.error('error')}
+      {select === 'Misc' ? <Misc /> : console.error('error')}
+      {select === 'Source' ? <Source /> : console.error('error')}
     </div>
   );
 };

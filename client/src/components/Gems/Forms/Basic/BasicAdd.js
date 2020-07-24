@@ -56,7 +56,6 @@ const Basic = () => {
     },
   });
 
-
   const onChange = (e, elId) => {
     const updatedBasicInfo = {
       ...basicInfo,
@@ -90,8 +89,8 @@ const Basic = () => {
               value={el.config.value}
               changed={(e) => onChange(e, el.id)}
             />
-         )
-       })}
+          );
+        })}
         <button className={style.submitButton}>Submit</button>
       </form>
     </div>

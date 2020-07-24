@@ -116,7 +116,7 @@ const Appearance = () => {
   };
 
   const onSubmit = (e) => {
-    axios.post('/api/appearance', appear);
+    axios.post('/api/appear', appear);
     e.preventDefault();
   };
   // from utils

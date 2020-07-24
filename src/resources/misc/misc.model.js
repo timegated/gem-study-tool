@@ -1,6 +1,9 @@
 import mongoose from 'mongoose';
 
 const miscSchema = new mongoose.Schema({
+  name: {
+    type: String,
+  },
   rockType: {
     type: String,
   },
@@ -27,9 +30,6 @@ const miscSchema = new mongoose.Schema({
   },
   avgSize: {
     type: Number,
-  },
-  phen: {
-    type: String,
   },
   trade: {
     type: String,
