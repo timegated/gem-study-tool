@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { createArr } from '../../../../utils/elementsArray';
+import { changeHandler } from '../../../../utils/changeHandler';
 import axios from 'axios';
 import Input from '../../../Layout/Input/Input';
 import style from './Appearance.css';
@@ -103,17 +104,6 @@ const Appearance = () => {
       value: '',
     },
   });
-  const onChange = (e, elId) => {
-    const updatedAppear = {
-      ...appear,
-    };
-    const updatedFormEl = {
-      ...updatedAppear[elId],
-    };
-    updatedFormEl.value = e.target.value;
-    updatedAppear[elId] = updatedFormEl;
-    setAppear(updatedAppear);
-  };
 
   const onSubmit = (e) => {
     axios.post('/api/appear', appear);
@@ -133,7 +123,7 @@ const Appearance = () => {
               elType={el.config.elType}
               elConfig={el.config.elConfig}
               value={el.config.value}
-              changed={(e) => onChange(e, el.id)}
+              changed={(e) => changeHandler(e, el.id, appear, setAppear)}
             />
           );
         })}

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { createArr } from '../../../../utils/elementsArray';
+import { changeHandler } from '../../../../utils/changeHandler';
 import axios from 'axios';
 import Input from '../../../Layout/Input/Input';
 import style from './Misc.css';
@@ -103,19 +104,9 @@ const Misc = () => {
       value: '',
     },
   });
-  const onChange = (e, elId) => {
-    const updatedState = {
-      ...misc,
-    };
-    const updatedFormEl = {
-      ...updatedState[elId],
-    };
-    updatedFormEl.value = e.target.value;
-    updatedState[elId] = updatedFormEl;
-    setMisc(updatedState);
-  };
+
   const onSubmit = (e) => {
-    axios.post('/api/source', misc);
+    axios.post('/api/misc', misc);
     e.preventDefault();
   };
   const elArr = createArr(misc);
@@ -130,7 +121,7 @@ const Misc = () => {
               elType={el.config.elType}
               elConfig={el.config.elConfig}
               value={el.config.value}
-              change={(e) => onChange(e, el.id)}
+              change={(e) => changeHandler(e, el.id, misc, setMisc)}
             />
           );
         })}

@@ -10,6 +10,9 @@ var _mongoose = _interopRequireDefault(require("mongoose"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const sourceSchema = new _mongoose.default.Schema({
+  name: {
+    type: String
+  },
   primary: {
     type: String
   },

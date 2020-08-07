@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { createArr } from '../../../../utils/elementsArray';
+import { changeHandler } from '../../../../utils/changeHandler';
 import Input from '../../../Layout/Input/Input';
 import style from './Source.css';
 import axios from 'axios';
@@ -46,17 +47,7 @@ const Source = () => {
       },
     },
   });
-  const onChange = (e, elId) => {
-    const updatedState = {
-      ...source,
-    };
-    const updatedFormEl = {
-      ...updatedState[elId],
-    };
-    updatedFormEl.value = e.target.value;
-    updatedState[elId] = updatedFormEl;
-    setSource(updatedState);
-  };
+
   const onSubmit = (e) => {
     axios.post('/api/source', source);
     e.preventDefault();
@@ -73,7 +64,7 @@ const Source = () => {
               elType={el.config.elType}
               elConfig={el.config.elConfig}
               value={el.config.value}
-              change={(e) => onChange(e, el.id)}
+              change={(e) => changeHandler(e, el.id, source, setSource)}
             />
           );
         })}

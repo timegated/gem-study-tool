@@ -16,9 +16,9 @@ const appearSchema = new _mongoose.default.Schema({
   colorAgent: {
     type: String
   },
-  caEffects: {
+  caEffects: [{
     type: String
-  },
+  }],
   phen: {
     type: String
   },

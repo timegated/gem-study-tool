@@ -10,6 +10,9 @@ var _mongoose = _interopRequireDefault(require("mongoose"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const miscSchema = new _mongoose.default.Schema({
+  name: {
+    type: String
+  },
   rockType: {
     type: String
   },
@@ -36,9 +39,6 @@ const miscSchema = new _mongoose.default.Schema({
   },
   avgSize: {
     type: Number
-  },
-  phen: {
-    type: String
   },
   trade: {
     type: String

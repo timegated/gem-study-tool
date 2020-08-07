@@ -7,9 +7,7 @@ const appearSchema = new mongoose.Schema({
   colorAgent: {
     type: String,
   },
-  caEffects: {
-    type: String,
-  },
+  caEffects: [{ type: String }],
   phen: {
     type: String,
   },

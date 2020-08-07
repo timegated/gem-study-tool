@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { createArr } from '../../../../utils/elementsArray';
+import { changeHandler } from '../../../../utils/changeHandler';
 import Input from '../../../Layout/Input/Input';
 import style from './BasicAdd.css';
 
@@ -56,23 +57,11 @@ const Basic = () => {
     },
   });
 
-  const onChange = (e, elId) => {
-    const updatedBasicInfo = {
-      ...basicInfo,
-    };
-    const updatedFormEl = {
-      ...updatedBasicInfo[elId],
-    };
-    updatedFormEl.value = e.target.value;
-    updatedBasicInfo[elId] = updatedFormEl;
-    setBasicInfo(updatedBasicInfo);
-  };
-
   const onSubmit = (e) => {
     axios.post('/api/basic', basicInfo);
     e.preventDefault();
   };
-
+  console.log(basicInfo);
   // from utils
   const elArr = createArr(basicInfo);
 
@@ -87,7 +76,7 @@ const Basic = () => {
               elType={el.config.elType}
               elConfig={el.config.elConfig}
               value={el.config.value}
-              changed={(e) => onChange(e, el.id)}
+              changed={(e) => changeHandler(e, el.id, basicInfo, setBasicInfo)}
             />
           );
         })}

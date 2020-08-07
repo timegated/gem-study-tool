@@ -7,7 +7,7 @@
     "build": "babel src --out-dir dist",
     "format": "prettier --write \"src/**/*.js\"",
     "start": "node dist/server.js",
-    "server": "nodemon dist/server.js",
+    "server": "npm run build && nodemon dist/server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
@@ -23,7 +23,9 @@
   },
   "homepage": "https://github.com/timegated/gem-study-tool#readme",
   "dependencies": {
+    "axios": "^0.19.2",
     "body-parser": "^1.19.0",
+    "cheerio": "^1.0.0-rc.3",
     "config": "^3.3.1",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
@@ -31,7 +33,9 @@
     "lodash": "^4.17.19",
     "mongoose": "^5.9.25",
     "morgan": "^1.10.0",
-    "puppeteer": "^5.2.0"
+    "puppeteer": "^5.2.0",
+    "request": "^2.88.2",
+    "requestretry": "^4.1.1"
   },
   "devDependencies": {
     "@babel/cli": "^7.10.4",
