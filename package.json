@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "description": "A studying tool designed to help people find information on precious stones",
   "main": "index.js",
+  "engines": {
+    "node":"12.6.2"
+  },
   "scripts": {
     "build": "babel src --out-dir dist",
     "format": "prettier --write \"src/**/*.js\"",
     "start": "node dist/server.js",
     "server": "npm run build && nodemon dist/server.js",
     "client": "npm start --prefix client",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "heroku-postbuild": "cd client && npm install && npm run build"
+
   },
   "repository": {
     "type": "git",

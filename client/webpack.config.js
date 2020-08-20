@@ -18,6 +18,7 @@ module.exports = {
   devtool: 'inline-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
+    hot: true,
     historyApiFallback: true,
     open: true,
     clientLogLevel: 'silent',
