@@ -17,6 +17,6 @@ switch (env) {
     break;
   default:
     envConfig = require('./dev').config;
-}
+};
 
 export default merge(baseConfig, envConfig);

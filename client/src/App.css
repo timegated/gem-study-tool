@@ -1,6 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Markazi+Text&display=swap');
 
-* {
+:root{
+  --main-bg-color: #615D6C;
+  --alt-bg-color: #6F8AB7;
+  --alt-2-bg-color: #89BBFE;
+  --main-font-color: #FFFFFF;
+}
+
+*, 
+*:before, 
+*:after {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 

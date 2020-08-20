@@ -6,10 +6,21 @@
 	width: 100%;
 	height: 56px;
 	padding: 0;
-	background: #FFDDCC;
+	background: var(--alt-2-bg-color);
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   z-index: 50;
   font-family: 'Hammersmith One', sans-serif;
+}
+
+.Logo {
+	display: inline-block;
+	width: 65px;
+	margin: 0;
+	padding: 0;
+}
+
+.Img {
+	width: 100%;
 }
 
 .header h1 {
@@ -42,10 +53,14 @@
 
 .header nav a:hover,
 .header nav a:active {
-	background: #FFCCB3;
+	background: var(--alt-bg-color);
+	color: var(--main-font-color);
 	text-decoration: underline;
 }
 
-.header nav a.active {
-	background: #FFCCB3;
+@media screen and (max-width: 480px) {
+	.header {
+		display: none;
+		visibility: hidden;
+	}
 }

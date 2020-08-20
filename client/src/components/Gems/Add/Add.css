@@ -1,11 +1,9 @@
 .addContent {
   display: flex;
   flex-direction: column;
-  margin: 5rem auto;
   color: black;
   background: #FFDDCC;
   padding: 4rem;
-  width: 50%;
   border-radius: 18px;
   box-shadow: 1px 1px 1px 1px black;
 }

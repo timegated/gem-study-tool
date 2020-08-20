@@ -10,7 +10,7 @@ var _cors = _interopRequireDefault(require("cors"));
 
 var _db = require("./utils/db");
 
-var _color = _interopRequireDefault(require("./resources/color/color.router"));
+var _appear = _interopRequireDefault(require("./resources/appear/appear.router"));
 
 var _basic = _interopRequireDefault(require("./resources/basic/basic.router"));
 
@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
   });
 });
 app.use('/api', router);
-app.use('/api/appear', _color.default);
+app.use('/api/appear', _appear.default);
 app.use('/api/basic', _basic.default);
 app.use('/api/misc', _misc.default);
 app.use('/api/source', _source.default);

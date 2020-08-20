@@ -1,11 +1,11 @@
 .gemContent {
-  margin: 5rem auto;
+  margin: 15rem auto;
   color: black;
   display: flex;
   justify-content: center;
 }
 
-.gemContent a {
+.gemLinks {
   margin: 1rem;
   text-decoration: none;
   padding: 1rem;
@@ -13,4 +13,11 @@
   background: #2c2c2c;
   color: #FFDDCC;
   box-shadow: 1px 1px 1px 1px #2c2c2c;
+}
+
+@media screen and (max-width: 767px) {
+  .gemContent {
+    display: flex;
+    flex-direction: column;
+  }
 }

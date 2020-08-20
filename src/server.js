@@ -4,7 +4,7 @@ import morgan from 'morgan';
 import cors from 'cors';
 import { connect } from './utils/db';
 // import config from './config';
-import appearRouter from './resources/color/color.router';
+import appearRouter from './resources/appear/appear.router';
 import basicRouter from './resources/basic/basic.router';
 import miscRouter from './resources/misc/misc.router';
 import sourceRouter from './resources/source/source.router';

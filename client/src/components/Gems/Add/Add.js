@@ -3,6 +3,7 @@ import BasicAdd from '../Forms/Basic/BasicAdd';
 import Appearance from '../Forms/Appearance/Appearance';
 import Misc from '../Forms/Misc/Misc';
 import Source from '../Forms/Source/Source';
+import MobileNav from '../../Layout/MobileNav/MobileNav';
 import styles from './Add.css';
 
 const Add = () => {
@@ -30,6 +31,7 @@ const Add = () => {
       {select === 'Appearance' ? <Appearance /> : console.error('error')}
       {select === 'Misc' ? <Misc /> : console.error('error')}
       {select === 'Source' ? <Source /> : console.error('error')}
+      <MobileNav />
     </div>
   );
 };

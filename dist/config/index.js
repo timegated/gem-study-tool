@@ -27,6 +27,8 @@ switch (env) {
     envConfig = require('./dev').config;
 }
 
+;
+
 var _default = (0, _lodash.default)(baseConfig, envConfig);
 
 exports.default = _default;

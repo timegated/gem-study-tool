@@ -50,6 +50,16 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(svg|png|jpg|gif|pdf)$/,
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[hash].[ext]',
+            outputPath: 'imgs',
+          },
+        },
+      },
     ],
   },
 };
