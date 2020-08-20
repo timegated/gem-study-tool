@@ -4,7 +4,8 @@
   "description": "A studying tool designed to help people find information on precious stones",
   "main": "index.js",
   "engines":{
-    "node":"6.11.1",
+    "node":"12.16.2",
+    "npm":"6.14.4",
     "yarn":"1.22.4"
   },
   "scripts": {
