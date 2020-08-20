@@ -1,26 +1,27 @@
 import React from 'react';
-import style from './GemBasic.css';
+import style from './GemBasic.module.css';
+
 const GemCard = ({ data }) => {
   return (
     <>
       {data !== null ? (
-        data.data.map((data) => {
+        data.data.map((gemData) => {
           return (
-            <div className={style.gemCard} key={data._id}>
+            <div className={style.gemCard} key={gemData._id}>
               <div className={style.gemCardTitle}>
-                <h1>{data.name}</h1>
+                <h1>{gemData.name}</h1>
               </div>
               <div className={style.gemCardContent}>
                 <h2>Species:</h2>
-                <p>{data.species}</p>
+                <p>{gemData.species}</p>
                 <h2>Variety</h2>
-                <p>{data.variety}</p>
+                <p>{gemData.variety}</p>
                 <h2>Habit</h2>
-                <p>{data.habit}</p>
+                <p>{gemData.habit}</p>
                 <h2>Crystal</h2>
-                <p>{data.crystal}</p>
+                <p>{gemData.crystal}</p>
                 <h2>Chemical</h2>
-                <p>{data.chemical}</p>
+                <p>{gemData.chemical}</p>
               </div>
             </div>
           );

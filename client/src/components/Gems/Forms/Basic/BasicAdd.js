@@ -3,12 +3,14 @@ import axios from 'axios';
 import { createArr } from '../../../../utils/elementsArray';
 import { changeHandler } from '../../../../utils/changeHandler';
 import Input from '../../../Layout/Input/Input';
-import style from './BasicAdd.css';
+import Button from '../../../Layout/Buttons/Buttons';
+import style from './BasicAdd.module.css';
 
 const Basic = () => {
   const [basicInfo, setBasicInfo] = useState({
     name: {
       elType: 'input',
+      label: 'Gem Name',
       elConfig: {
         type: 'text',
         placeholder: 'gem name',
@@ -17,6 +19,7 @@ const Basic = () => {
     },
     species: {
       elType: 'input',
+      label: 'Species',
       elConfig: {
         type: 'text',
         placeholder: 'species',
@@ -25,6 +28,7 @@ const Basic = () => {
     },
     variety: {
       elType: 'input',
+      label: 'Variety',
       elConfig: {
         type: 'text',
         placeholder: 'variety',
@@ -33,6 +37,7 @@ const Basic = () => {
     },
     crystal: {
       elType: 'input',
+      label: 'Crystal',
       elConfig: {
         type: 'text',
         placeholder: 'crystal',
@@ -41,6 +46,7 @@ const Basic = () => {
     },
     habit: {
       elType: 'input',
+      label: 'Habit',
       elConfig: {
         type: 'text',
         placeholder: 'habit',
@@ -49,6 +55,7 @@ const Basic = () => {
     },
     chemical: {
       elType: 'input',
+      label: 'Chemical',
       elConfig: {
         type: 'text',
         placeholder: 'chemical',
@@ -61,18 +68,19 @@ const Basic = () => {
     axios.post('/api/basic', basicInfo);
     e.preventDefault();
   };
-  console.log(basicInfo);
+
   // from utils
   const elArr = createArr(basicInfo);
 
   return (
-    <div className={style.addContent}>
+    <div className={style.AddContent}>
       <h1>Basic Info</h1>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className={style.Form}>
         {elArr.map((el) => {
           return (
             <Input
               key={el.id}
+              label={el.config.label}
               elType={el.config.elType}
               elConfig={el.config.elConfig}
               value={el.config.value}
@@ -80,7 +88,7 @@ const Basic = () => {
             />
           );
         })}
-        <button className={style.submitButton}>Submit</button>
+        <Button type="submit" />
       </form>
     </div>
   );

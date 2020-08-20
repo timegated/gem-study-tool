@@ -4,7 +4,7 @@ import Appearance from '../Forms/Appearance/Appearance';
 import Misc from '../Forms/Misc/Misc';
 import Source from '../Forms/Source/Source';
 import MobileNav from '../../Layout/MobileNav/MobileNav';
-import styles from './Add.css';
+import styles from './Add.module.css';
 
 const Add = () => {
   const [select, setSelect] = useState({

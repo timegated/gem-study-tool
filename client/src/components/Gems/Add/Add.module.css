@@ -1,10 +1,11 @@
 .addContent {
+  position: relative;
   display: flex;
   flex-direction: column;
-  margin: 5rem auto;
-  color: black;
-  background: #FFDDCC;
-  padding: 4rem;
+  color: var(--alt-font-color);
+  background: var(--alt-2-bg-color);
+  margin: 5rem 0 0 0;
+  padding: 5rem 0 5rem 0;
   border-radius: 18px;
   box-shadow: 1px 1px 1px 1px black;
 }
@@ -33,8 +34,7 @@
   cursor: pointer;
   box-shadow: 1px 1px 1px 1px #2c2c2c;
 }
-
-input[type="text"] {
+input[type="text"], textarea, select{
   display: block;
   width: 100%;
   padding: 0.4rem;
@@ -42,5 +42,3 @@ input[type="text"] {
   border: 1px solid #2c2c2c;
   border-radius: 10px;
 }
-
-

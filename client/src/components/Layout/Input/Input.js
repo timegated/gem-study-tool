@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './Input.css';
+import style from './Input.module.css';
 
 const Input = (props) => {
   let inputEl = null;
@@ -38,8 +38,8 @@ const Input = (props) => {
       );
   }
   return (
-    <div className={style.inputGroup}>
-      <label className={style.label}>{props.label}</label>
+    <div className={style.InputGroup}>
+      <label className={style.Label}>{props.label}</label>
       {inputEl}
     </div>
   );

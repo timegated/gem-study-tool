@@ -5,6 +5,7 @@
   --alt-bg-color: #6F8AB7;
   --alt-2-bg-color: #89BBFE;
   --main-font-color: #FFFFFF;
+  --alt-font-color: #000;
 }
 
 *, 
@@ -20,6 +21,6 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background: #efefef;
+  background: var(--main-bg-color);
   font-family: 'Makazi Text', sans-serif;
 }

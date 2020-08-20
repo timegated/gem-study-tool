@@ -11,7 +11,7 @@ import './App.css';
 
 const App = () => {
   return (
-    <div>
+    <>
       <Router>
         <Navbar />
         <Switch>
@@ -23,7 +23,7 @@ const App = () => {
         </Switch>
         {/* <Footer /> */}
       </Router>
-    </div>
+    </>
   );
 };
 

@@ -1,9 +1,14 @@
-
-.inputGroup {
-  font-size: 24px;
+.InputGroup {
+  font-size: 1.5rem;
+  width: 50%;
+  margin: 0 auto;
   border-radius: 10px;
   border: none;
   box-shadow: 1px 1px 1px 1px black;
   margin: 1rem;
   padding: 0.5rem;
+}
+
+.Label {
+  color: var(--main-font-color);
 }
