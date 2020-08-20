@@ -1,0 +1,30 @@
+.AppearanceContent {
+  display: flex;
+  flex-direction: column;
+  margin: 2.5rem auto;
+  color: var(--alt-font-color);
+  background: var(--alt-2-bg-color);
+  padding: 4rem;
+  border-radius: 18px;
+  box-shadow: 1px 1px 1px 1px black;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0.1
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.Form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+

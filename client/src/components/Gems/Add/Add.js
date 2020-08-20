@@ -18,7 +18,7 @@ const Add = () => {
     setSelect(e.target.value);
   };
   return (
-    <div className={styles.addContent}>
+    <div className={styles.AddContent}>
       <h1>Select What Info You'd Like To Input</h1>
       <select value={select} onChange={onChange}>
         <option value=""></option>
@@ -27,10 +27,14 @@ const Add = () => {
         <option value={misc}>Misc</option>
         <option value={source}>Source</option>
       </select>
-      {select === 'Basic' ? <BasicAdd /> : console.error('error')}
-      {select === 'Appearance' ? <Appearance /> : console.error('error')}
-      {select === 'Misc' ? <Misc /> : console.error('error')}
-      {select === 'Source' ? <Source /> : console.error('error')}
+      {select === 'Basic' ? <BasicAdd /> : console.log('nothing here yet')}
+      {select === 'Appearance' ? (
+        <Appearance />
+      ) : (
+        console.log('nothing here yet')
+      )}
+      {select === 'Misc' ? <Misc /> : console.log('nothing here yet')}
+      {select === 'Source' ? <Source /> : console.log('nothing here yet')}
       <MobileNav />
     </div>
   );

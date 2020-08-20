@@ -3,12 +3,14 @@ import { createArr } from '../../../../utils/elementsArray';
 import { changeHandler } from '../../../../utils/changeHandler';
 import axios from 'axios';
 import Input from '../../../Layout/Input/Input';
-import style from './Appearance.css';
+import Button from '../../../Layout/Buttons/Buttons';
+import style from './Appearance.module.css';
 
 const Appearance = () => {
   const [appear, setAppear] = useState({
     name: {
       elType: 'input',
+      label: 'Gem Name',
       elConfig: {
         type: 'text',
         placeholder: 'gem name',
@@ -17,6 +19,7 @@ const Appearance = () => {
     },
     colorAgent: {
       elType: 'input',
+      label: 'Coloring Agent',
       elConfig: {
         type: 'text',
         placeholder: 'coloring agent',
@@ -25,6 +28,7 @@ const Appearance = () => {
     },
     caEffects: {
       elType: 'input',
+      label: 'Color Agent Effects',
       elConfig: {
         type: 'text',
         placeholder: 'color agent effects',
@@ -33,6 +37,7 @@ const Appearance = () => {
     },
     phen: {
       elType: 'textarea',
+      label: 'Phenomena',
       elConfig: {
         type: 'text',
         placeholder: 'phenomena',
@@ -41,6 +46,7 @@ const Appearance = () => {
     },
     color: {
       elType: 'input',
+      label: 'color',
       elConfig: {
         type: 'text',
         placeholder: 'color',
@@ -49,6 +55,7 @@ const Appearance = () => {
     },
     fineCol: {
       elType: 'input',
+      label: 'Fine Color',
       elConfig: {
         type: 'text',
         placeholder: 'fine color',
@@ -57,6 +64,7 @@ const Appearance = () => {
     },
     opacity: {
       elType: 'input',
+      label: 'Opacity',
       elConfig: {
         type: 'text',
         placeholder: 'opacity',
@@ -65,6 +73,7 @@ const Appearance = () => {
     },
     fineTone: {
       elType: 'input',
+      label: 'Fine Tone',
       elConfig: {
         type: 'text',
         placeholder: 'fine tone',
@@ -73,6 +82,7 @@ const Appearance = () => {
     },
     fineSat: {
       elType: 'input',
+      label: 'Fine Saturation',
       elConfig: {
         type: 'text',
         placeholder: 'fine saturation',
@@ -81,6 +91,7 @@ const Appearance = () => {
     },
     clarity: {
       elType: 'input',
+      label: 'Clarity',
       elConfig: {
         type: 'text',
         placeholder: 'clarity',
@@ -89,6 +100,7 @@ const Appearance = () => {
     },
     clarityType: {
       elType: 'input',
+      label: 'Clarity Type',
       elConfig: {
         type: 'text',
         placeholder: 'clarity type',
@@ -97,6 +109,7 @@ const Appearance = () => {
     },
     cut: {
       elType: 'input',
+      label: 'Cut',
       elConfig: {
         type: 'text',
         placeholder: 'cut',
@@ -111,15 +124,15 @@ const Appearance = () => {
   };
   // from utils
   const elArr = createArr(appear);
-  // console.log(appear);
   return (
-    <div className={style.appearanceContent}>
+    <div className={style.AppearanceContent}>
       <h1>Appearance</h1>
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} className={style.Form}>
         {elArr.map((el) => {
           return (
             <Input
               key={el.id}
+              label={el.config.label}
               elType={el.config.elType}
               elConfig={el.config.elConfig}
               value={el.config.value}
@@ -127,7 +140,7 @@ const Appearance = () => {
             />
           );
         })}
-        <button className={style.submitButton}>Submit</button>
+        <Button type="submit" />
       </form>
     </div>
   );

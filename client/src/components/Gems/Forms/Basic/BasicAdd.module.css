@@ -1,7 +1,7 @@
 .AddContent {
   display: flex;
   flex-direction: column;
-  margin: 5rem auto;
+  margin: 2.5rem auto;
   width: 50%;
   color: var(--main-font--color);
   background: var(--alt-bg-color);
@@ -9,8 +9,16 @@
   border-radius: 18px;
   box-shadow: 1px 1px 1px 1px black;
   border: 1px solid black;
+  animation: fadeIn 0.5s ease;
 }
-
+@keyframes fadeIn {
+  0% {
+    opacity: 0.1
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .AddContent h1 {
   color: var(--main-font-color);
   text-align: center;

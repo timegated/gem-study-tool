@@ -1,42 +1,32 @@
-.addContent {
+.AddContent {
   position: relative;
   display: flex;
   flex-direction: column;
-  color: var(--alt-font-color);
-  background: var(--alt-2-bg-color);
-  margin: 5rem 0 0 0;
+  color: var(--main-font-color);
+  margin: 5rem auto;
   padding: 5rem 0 5rem 0;
-  border-radius: 18px;
-  box-shadow: 1px 1px 1px 1px black;
+  max-width: 75%;
+  justify-self: center;
+  align-self: center;
+  animation: fadeIn 0.2s ease;
 }
 
-.addContent h1 {
+@keyframes fadeIn {
+  0% {
+    opacity: 0.1
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.AddContent h1 {
   text-align: center;
 }
 
-.inputGroup {
-  font-size: 24px;
-  border-radius: 10px;
-  border: none;
-  box-shadow: 1px 1px 1px 1px black;
-  margin: 1rem;
-  padding: 0.5rem;
-}
-
-.submitButton {
-  display: inline-block;
-  background: #f8aa82;
-  font-size: 18px;
-  font-weight: bold;
-  color: #2c2c2c;
-  border-radius: 10px;
-  width: 100%;
-  cursor: pointer;
-  box-shadow: 1px 1px 1px 1px #2c2c2c;
-}
-input[type="text"], textarea, select{
+input[type="text"], textarea, select {
   display: block;
-  width: 100%;
+  margin: 2rem auto;
   padding: 0.4rem;
   font-size: 24px;
   border: 1px solid #2c2c2c;

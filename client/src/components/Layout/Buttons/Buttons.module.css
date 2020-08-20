@@ -6,6 +6,7 @@
   color: var(--alt-font-color);
   border-radius: 10px;
   align-self: center;
+  margin-top: 1rem;
   border: none;
   cursor: pointer;
   box-shadow: 1px 1px 1px 1px #2c2c2c;
