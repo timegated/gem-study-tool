@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import MobileNav from '../../Layout/MobileNav/MobileNav';
 import styles from './Home.module.css';
@@ -24,8 +25,8 @@ const Home = () => {
           Take control of how you want to read your info
         </p>
         <p className={styles.InfoBlock}>It'll be here when you get back</p>
-          </div>
-          <MobileNav />
+      </div>
+      <MobileNav />
     </div>
   );
 };

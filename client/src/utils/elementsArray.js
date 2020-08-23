@@ -1,6 +1,6 @@
 export const createArr = (obj) => {
   const elArr = [];
-  for (let key in obj) {
+  for (const key in obj) {
     elArr.push({
       id: key,
       config: obj[key],

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import BasicAdd from '../Forms/Basic/BasicAdd';
 import Appearance from '../Forms/Appearance/Appearance';
