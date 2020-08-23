@@ -4,7 +4,6 @@ import BasicAdd from '../Forms/Basic/BasicAdd';
 import Appearance from '../Forms/Appearance/Appearance';
 import Misc from '../Forms/Misc/Misc';
 import Source from '../Forms/Source/Source';
-import MobileNav from '../../Layout/MobileNav/MobileNav';
 import styles from './Add.module.css';
 
 const Add = () => {
@@ -36,7 +35,6 @@ const Add = () => {
       )}
       {select === 'Misc' ? <Misc /> : console.log('nothing here yet')}
       {select === 'Source' ? <Source /> : console.log('nothing here yet')}
-      <MobileNav />
     </div>
   );
 };

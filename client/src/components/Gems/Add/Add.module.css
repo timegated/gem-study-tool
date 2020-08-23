@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  color: var(--main-font-color);
+  color: var(--alt-font-color);
   margin: 5rem auto;
   padding: 5rem 0 5rem 0;
   max-width: 75%;

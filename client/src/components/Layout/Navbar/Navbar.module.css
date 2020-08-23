@@ -6,7 +6,7 @@
 	width: 100%;
 	height: 56px;
 	padding: 0;
-	background: var(--alt-2-bg-color);
+	background: var(--alt-bg-color);
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   z-index: 50;
   font-family: 'Hammersmith One', sans-serif;
@@ -15,22 +15,12 @@
 .Logo {
 	display: inline-block;
 	width: 65px;
-	margin: 0;
+	margin: 0 0 0 1.5rem;
 	padding: 0;
 }
 
 .Img {
 	width: 100%;
-}
-
-.header h1 {
-	float: left;
-	margin: 0;
-	padding: 0 15px;
-	font-size: 36px;
-	line-height: 56px;
-	font-weight: 400;
-	color: #220033;
 }
 
 .header nav {

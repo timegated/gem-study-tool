@@ -2,7 +2,6 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import MobileNav from '../../Layout/MobileNav/MobileNav';
 import styles from './Gems.module.css';
 
 const Gems = () => {
@@ -20,7 +19,6 @@ const Gems = () => {
       <Link to="" className={styles.gemLinks} href="#!">
         Source Info
       </Link>
-      <MobileNav />
     </div>
   );
 };

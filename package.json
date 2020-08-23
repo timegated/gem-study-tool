@@ -14,7 +14,7 @@
     "start": "node dist/server.js",
     "server": "yarn run build && nodemon dist/server.js",
     "client": "yarn start --prefix client",
-    "dev": "concurrently \"yarn run server\" \"yarn run client\"",
+    "dev": "concurrently \"yarn run start\" \"yarn run client\"",
     "heroku-postbuild": "cd client && yarn install && yarn run build"
 
   },

@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Markazi+Text&display=swap');
 
 :root{
-  --main-bg-color: #615D6C;
+  --main-bg-color: #CFCFCD;
+  --bg-color-light: #EBEBEB;
   --alt-bg-color: #6F8AB7;
   --alt-2-bg-color: #89BBFE;
   --main-font-color: #FFFFFF;
@@ -21,7 +22,7 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
-  background: var(--main-bg-color);
+  background: var(--bg-color-light);
   font-family: 'Makazi Text', sans-serif;
 }
 
