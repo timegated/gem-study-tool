@@ -4,7 +4,7 @@ import { json, urlencoded } from 'body-parser';
 import morgan from 'morgan';
 import cors from 'cors';
 import { connect } from './utils/db';
-// import config from './config';
+import config from './config';
 import appearRouter from './resources/appear/appear.router';
 import basicRouter from './resources/basic/basic.router';
 import miscRouter from './resources/misc/misc.router';
@@ -36,13 +36,11 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-const PORT = process.env.NODE_ENV || 3000;
-
 const start = async () => {
   try {
     await connect();
-    app.listen(PORT, () => {
-      console.log(`Server running on port: ${PORT}`);
+    app.listen(config.port, () => {
+      console.log(`Server running on port: ${config.port}`);
     });
   } catch (error) {
     console.error(error);

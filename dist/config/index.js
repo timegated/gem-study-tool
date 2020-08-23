@@ -8,10 +8,11 @@ exports.default = void 0;
 var _lodash = require("lodash");
 
 const env = process.env.NODE_ENV || 'development';
+const PORT = process.env.PORT || 3000;
 const baseConfig = {
   env,
   isDev: env === 'development',
-  port: 3000
+  port: PORT
 };
 let envConfig = {};
 

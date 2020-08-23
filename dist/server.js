@@ -12,6 +12,8 @@ var _cors = _interopRequireDefault(require("cors"));
 
 var _db = require("./utils/db");
 
+var _config = _interopRequireDefault(require("./config"));
+
 var _appear = _interopRequireDefault(require("./resources/appear/appear.router"));
 
 var _basic = _interopRequireDefault(require("./resources/basic/basic.router"));
@@ -22,7 +24,6 @@ var _source = _interopRequireDefault(require("./resources/source/source.router")
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import config from './config';
 const app = (0, _express.default)();
 
 const router = _express.default.Router();
@@ -52,13 +53,11 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-const PORT = process.env.NODE_ENV || 3000;
-
 const start = async () => {
   try {
     await (0, _db.connect)();
-    app.listen(PORT, () => {
-      console.log(`Server running on port: ${PORT}`);
+    app.listen(_config.default.port, () => {
+      console.log(`Server running on port: ${_config.default.port}`);
     });
   } catch (error) {
     console.error(error);
