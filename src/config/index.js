@@ -1,4 +1,4 @@
-import merge from 'lodash';
+import { merge } from 'lodash';
 
 const env = process.env.NODE_ENV || 'development';
 
