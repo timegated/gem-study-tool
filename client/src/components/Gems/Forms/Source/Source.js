@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import { createArr } from '../../../../utils/elementsArray';
 import { changeHandler } from '../../../../utils/changeHandler';
 import Input from '../../../Layout/Input/Input';
+import Form from '../../../Layout/Form/Form';
+import Button from '../../../Layout/Buttons/Buttons';
 import style from './Source.css';
 import axios from 'axios';
 
@@ -10,6 +12,7 @@ const Source = () => {
   const [source, setSource] = useState({
     name: {
       elType: 'input',
+      label: 'Gem Name',
       elConfig: {
         type: 'text',
         placeholder: 'gem name',
@@ -18,6 +21,7 @@ const Source = () => {
     },
     primary: {
       elType: 'textarea',
+      label: 'Primary Source',
       elConfig: {
         type: 'text',
         placeholder: 'primary source',
@@ -26,6 +30,7 @@ const Source = () => {
     },
     mines: {
       elType: 'textarea',
+      label: 'Mining Sources',
       elConfig: {
         type: 'text',
         placeholder: 'mining sources',
@@ -34,6 +39,7 @@ const Source = () => {
     },
     mainConsume: {
       elType: 'textarea',
+      label: 'Main Consumer',
       elConfig: {
         type: 'text',
         placeholder: 'main consumer',
@@ -42,6 +48,7 @@ const Source = () => {
     },
     manu: {
       elType: 'textarea',
+      label: 'Manufacturing',
       elConfig: {
         type: 'text',
         placeholder: 'manufacturing',
@@ -57,20 +64,21 @@ const Source = () => {
   return (
     <div className={style.sourceContent}>
       <h1>Source Info</h1>
-      <form onSubmit={onSubmit}>
+      <Form onSubmit={onSubmit}>
         {elArr.map((el) => {
           return (
             <Input
               key={el.id}
               elType={el.config.elType}
+              label={el.config.label}
               elConfig={el.config.elConfig}
               value={el.config.value}
               change={(e) => changeHandler(e, el.id, source, setSource)}
             />
           );
         })}
-        <button className={style.submitButton}>Submit</button>
-      </form>
+        <Button type="Submit" />
+      </Form>
     </div>
   );
 };

@@ -1,8 +1,5 @@
 .AddContent {
-  display: flex;
-  flex-direction: column;
   margin: 2.5rem auto;
-  width: 50%;
   color: var(--main-font--color);
   background: var(--alt-bg-color);
   padding: 4rem;
@@ -11,6 +8,7 @@
   border: 1px solid black;
   animation: fadeIn 0.5s ease;
 }
+
 @keyframes fadeIn {
   0% {
     opacity: 0.1
@@ -19,33 +17,12 @@
     opacity: 1;
   }
 }
+
 .AddContent h1 {
   color: var(--main-font-color);
   text-align: center;
 }
 
-.Form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
 
 
-
-input[type="text"] {
-  display: block;
-  width: 100%;
-  padding: 0.4rem;
-  font-size: 24px;
-  border: 1px solid #2c2c2c;
-  border-radius: 10px;
-}
-
-
-/* @media screen and (min-width: 680px) {
-  .addContent {
-    margin: 20rem 0 0 0;
-  }
-} */
 

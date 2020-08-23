@@ -4,12 +4,15 @@ import { createArr } from '../../../../utils/elementsArray';
 import { changeHandler } from '../../../../utils/changeHandler';
 import axios from 'axios';
 import Input from '../../../Layout/Input/Input';
+import Form from '../../../Layout/Form/Form';
+import Button from '../../../Layout/Buttons/Buttons';
 import style from './Misc.css';
 
 const Misc = () => {
   const [misc, setMisc] = useState({
     name: {
       elType: 'input',
+      label: 'Gem Name',
       elConfig: {
         type: 'text',
         placeholder: 'gem name',
@@ -18,6 +21,7 @@ const Misc = () => {
     },
     rockType: {
       elType: 'input',
+      label: 'Rock-Type',
       elConfig: {
         type: 'text',
         placeholder: 'rock type',
@@ -26,6 +30,7 @@ const Misc = () => {
     },
     deposit: {
       elType: 'textarea',
+      label: 'Deposit',
       elConfig: {
         type: 'text',
         placeholder: 'deposit',
@@ -34,6 +39,7 @@ const Misc = () => {
     },
     formation: {
       elType: 'input',
+      label: 'Formation',
       elConfig: {
         type: 'text',
         placeholder: 'formation',
@@ -42,6 +48,7 @@ const Misc = () => {
     },
     treat: {
       elType: 'input',
+      label: 'Treatment',
       elConfig: {
         type: 'text',
         placeholder: 'treatment',
@@ -50,6 +57,7 @@ const Misc = () => {
     },
     treatRes: {
       elType: 'textarea',
+      label: 'Treatment Result',
       elConfig: {
         type: 'text',
         placeholder: 'treatment result',
@@ -58,6 +66,7 @@ const Misc = () => {
     },
     imit: {
       elType: 'textarea',
+      label: 'Imitations',
       elConfig: {
         type: 'text',
         placeholder: 'imitations',
@@ -66,6 +75,7 @@ const Misc = () => {
     },
     synth: {
       elType: 'textarea',
+      label: 'Synthetics',
       elConfig: {
         type: 'text',
         placeholder: 'synthetics',
@@ -74,6 +84,7 @@ const Misc = () => {
     },
     mohs: {
       elType: 'input',
+      label: 'Mohs Number',
       elConfig: {
         type: 'text',
         placeholder: 'mohs number',
@@ -82,6 +93,7 @@ const Misc = () => {
     },
     avgSize: {
       elType: 'input',
+      label: 'Average Size',
       elConfig: {
         type: 'text',
         placeholder: 'average size',
@@ -90,6 +102,7 @@ const Misc = () => {
     },
     trade: {
       elType: 'textarea',
+      label: 'Trade Terms',
       elConfig: {
         type: 'text',
         placeholder: 'trade terms',
@@ -98,6 +111,7 @@ const Misc = () => {
     },
     funFacts: {
       elType: 'textarea',
+      label: 'Fun Facts',
       elConfig: {
         type: 'text',
         placeholder: 'fun facts',
@@ -114,20 +128,21 @@ const Misc = () => {
   return (
     <div className={style.miscContent}>
       <h1>Miscellaneous Info</h1>
-      <form onSubmit={onSubmit}>
+      <Form onSubmit={onSubmit}>
         {elArr.map((el) => {
           return (
             <Input
               key={el.id}
               elType={el.config.elType}
+              label={el.config.label}
               elConfig={el.config.elConfig}
               value={el.config.value}
               change={(e) => changeHandler(e, el.id, misc, setMisc)}
             />
           );
         })}
-        <button className={style.submitButton}>Submit</button>
-      </form>
+        <Button type="Submit" />
+      </Form>
     </div>
   );
 };

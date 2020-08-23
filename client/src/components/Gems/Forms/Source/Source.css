@@ -3,20 +3,18 @@
   flex-direction: column;
   margin: 5rem auto;
   color: black;
-  background: #FFDDCC;
+  background: var(--alt-bg-color);
   padding: 4rem;
   border-radius: 18px;
   box-shadow: 1px 1px 1px 1px black;
+  animation: fadeIn 0.5s ease;
 }
 
-.submitButton {
-  display: inline-block;
-  background: #f8aa82;
-  font-size: 18px;
-  font-weight: bold;
-  color: #2c2c2c;
-  border-radius: 10px;
-  width: 100%;
-  cursor: pointer;
-  box-shadow: 1px 1px 1px 1px #2c2c2c;
+@keyframes fadeIn {
+  0% {
+    opacity: 0.1
+  }
+  100% {
+    opacity: 1;
+  }
 }

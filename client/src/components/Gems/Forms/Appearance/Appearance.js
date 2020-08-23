@@ -4,6 +4,7 @@ import { createArr } from '../../../../utils/elementsArray';
 import { changeHandler } from '../../../../utils/changeHandler';
 import axios from 'axios';
 import Input from '../../../Layout/Input/Input';
+import Form from '../../../Layout/Form/Form';
 import Button from '../../../Layout/Buttons/Buttons';
 import style from './Appearance.module.css';
 
@@ -128,7 +129,7 @@ const Appearance = () => {
   return (
     <div className={style.AppearanceContent}>
       <h1>Appearance</h1>
-      <form onSubmit={onSubmit} className={style.Form}>
+      <Form onSubmit={onSubmit}>
         {elArr.map((el) => {
           return (
             <Input
@@ -142,7 +143,7 @@ const Appearance = () => {
           );
         })}
         <Button type="submit" />
-      </form>
+      </Form>
     </div>
   );
 };

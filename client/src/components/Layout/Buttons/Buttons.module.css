@@ -18,3 +18,7 @@
   background: var(--alt-bg-color);
   color: var(--main-font-color);
 }
+
+.Button:focus {
+  outline: none;
+}

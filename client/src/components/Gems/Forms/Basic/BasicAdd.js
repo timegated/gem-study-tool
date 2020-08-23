@@ -4,6 +4,7 @@ import axios from 'axios';
 import { createArr } from '../../../../utils/elementsArray';
 import { changeHandler } from '../../../../utils/changeHandler';
 import Input from '../../../Layout/Input/Input';
+import Form from '../../../Layout/Form/Form';
 import Button from '../../../Layout/Buttons/Buttons';
 import style from './BasicAdd.module.css';
 
@@ -76,7 +77,7 @@ const Basic = () => {
   return (
     <div className={style.AddContent}>
       <h1>Basic Info</h1>
-      <form onSubmit={onSubmit} className={style.Form}>
+      <Form onSubmit={onSubmit} className={style.Form}>
         {elArr.map((el) => {
           return (
             <Input
@@ -90,7 +91,7 @@ const Basic = () => {
           );
         })}
         <Button type="submit" />
-      </form>
+      </Form>
     </div>
   );
 };
