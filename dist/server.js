@@ -2,6 +2,8 @@
 
 var _express = _interopRequireDefault(require("express"));
 
+var _path = _interopRequireDefault(require("path"));
+
 var _bodyParser = require("body-parser");
 
 var _morgan = _interopRequireDefault(require("morgan"));
@@ -42,6 +44,14 @@ app.use('/api/appear', _appear.default);
 app.use('/api/basic', _basic.default);
 app.use('/api/misc', _misc.default);
 app.use('/api/source', _source.default);
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(_express.default.static('client/build'));
+  app.get('*', (req, res) => {
+    res.sendFile(_path.default.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
+}
+
 const PORT = process.env.NODE_ENV || 3000;
 
 const start = async () => {

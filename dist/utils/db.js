@@ -15,7 +15,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-const connect = (url = 'mongodb://localhost:27017/gem-tools', opts = {}) => {
+const connect = (url = `mongodb+srv://dbeccaria:${process.env.DB_PW}@cluster0.itfdp.mongodb.net/<dbname>?retryWrites=true&w=majority`, opts = {}) => {
   console.log('Mongodb connected');
   return _mongoose.default.connect(url, _objectSpread(_objectSpread({}, opts), {}, {
     useNewUrlParser: true,

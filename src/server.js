@@ -1,4 +1,5 @@
 import express from 'express';
+import path from 'path';
 import { json, urlencoded } from 'body-parser';
 import morgan from 'morgan';
 import cors from 'cors';
@@ -27,6 +28,13 @@ app.use('/api/appear', appearRouter);
 app.use('/api/basic', basicRouter);
 app.use('/api/misc', miscRouter);
 app.use('/api/source', sourceRouter);
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
+}
 
 const PORT = process.env.NODE_ENV || 3000;
 
