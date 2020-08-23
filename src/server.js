@@ -19,10 +19,6 @@ app.use(urlencoded({ extended: true }));
 app.use(morgan('dev'));
 app.use(cors());
 
-app.get('/', (req, res) => {
-  res.send({ msg: 'Hello from the server' });
-});
-
 app.use('/api', router);
 app.use('/api/appear', appearRouter);
 app.use('/api/basic', basicRouter);

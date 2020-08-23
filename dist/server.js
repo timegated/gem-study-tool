@@ -35,11 +35,6 @@ app.use((0, _bodyParser.urlencoded)({
 }));
 app.use((0, _morgan.default)('dev'));
 app.use((0, _cors.default)());
-app.get('/', (req, res) => {
-  res.send({
-    msg: 'Hello from the server'
-  });
-});
 app.use('/api', router);
 app.use('/api/appear', _appear.default);
 app.use('/api/basic', _basic.default);
