@@ -1,11 +1,12 @@
 .AddContent {
-  margin: 2.5rem auto;
+  margin: 1.5rem auto;
   color: var(--main-font--color);
-  background: var(--alt-bg-color);
+  background: var(--alt-2-bg-color);
   padding: 4rem;
   border-radius: 18px;
   box-shadow: 1px 1px 1px 1px black;
   border: 1px solid black;
+  width: 100%;
   animation: fadeIn 0.5s ease;
 }
 

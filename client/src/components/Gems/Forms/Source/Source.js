@@ -5,7 +5,7 @@ import { changeHandler } from '../../../../utils/changeHandler';
 import Input from '../../../Layout/Input/Input';
 import Form from '../../../Layout/Form/Form';
 import Button from '../../../Layout/Buttons/Buttons';
-import style from './Source.css';
+import style from './Source.module.css';
 import axios from 'axios';
 
 const Source = () => {
@@ -54,12 +54,21 @@ const Source = () => {
         placeholder: 'manufacturing',
       },
     },
+    thing: {
+      elType: 'textarea',
+      label: 'Manufacturing',
+      elConfig: {
+        type: 'text',
+        placeholder: 'manufacturing',
+      },
+    },
   });
 
   const onSubmit = (e) => {
     axios.post('/api/source', source);
     e.preventDefault();
   };
+
   const elArr = createArr(source);
   return (
     <div className={style.sourceContent}>
@@ -77,7 +86,7 @@ const Source = () => {
             />
           );
         })}
-        <Button type="Submit" />
+        <Button className={style.sourceButton} type="Submit" />
       </Form>
     </div>
   );

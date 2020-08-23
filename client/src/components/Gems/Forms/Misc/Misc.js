@@ -6,7 +6,7 @@ import axios from 'axios';
 import Input from '../../../Layout/Input/Input';
 import Form from '../../../Layout/Form/Form';
 import Button from '../../../Layout/Buttons/Buttons';
-import style from './Misc.css';
+import style from './Misc.module.css';
 
 const Misc = () => {
   const [misc, setMisc] = useState({

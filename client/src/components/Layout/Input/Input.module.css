@@ -1,6 +1,6 @@
 .InputGroup {
   font-size: 1.5rem;
-  flex: 1 1 50%;
+  flex: 1 1 30%;
   margin: 0 auto;
   border-radius: 10px;
   border: none;
@@ -16,8 +16,9 @@ input[type="text"], textarea, select {
   font-size: 24px;
   border: 1px solid #2c2c2c;
   border-radius: 10px;
+  width: 100%;
 }
 
 .Label {
-  color: var(--main-font-color);
+  color: var(--alt-font-color);
 }

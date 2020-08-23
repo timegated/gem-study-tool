@@ -48,7 +48,7 @@ const Appearance = () => {
     },
     color: {
       elType: 'input',
-      label: 'color',
+      label: 'Color',
       elConfig: {
         type: 'text',
         placeholder: 'color',

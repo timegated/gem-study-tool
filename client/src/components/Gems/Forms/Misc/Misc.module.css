@@ -1,12 +1,11 @@
-.sourceContent {
-  display: flex;
-  flex-direction: column;
-  margin: 5rem auto;
+.miscContent {
+  margin: 1.5rem auto;
   color: black;
-  background: var(--alt-bg-color);
+  background: var(--alt-2-bg-color);
   padding: 4rem;
   border-radius: 18px;
   box-shadow: 1px 1px 1px 1px black;
+  width: 100%;
   animation: fadeIn 0.5s ease;
 }
 
