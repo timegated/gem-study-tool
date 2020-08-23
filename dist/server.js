@@ -47,9 +47,9 @@ app.use('/api/misc', _misc.default);
 app.use('/api/source', _source.default);
 
 if (process.env.NODE_ENV === 'production') {
-  app.use(_express.default.static('client/build'));
+  app.use(_express.default.static('client/dist'));
   app.get('*', (req, res) => {
-    res.sendFile(_path.default.resolve(__dirname, 'client', 'build', 'index.html'));
+    res.sendFile(_path.default.resolve(__dirname, 'client', 'dist', 'index.html'));
   });
 }
 
