@@ -8,8 +8,7 @@
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
     "format": "prettier --write \"src/**/*.js\"",
-    "eslint-fix": "eslint --fix \"src/**/*.js\"",
-    "build":"webpack --production"
+    "eslint-fix": "eslint --fix \"src/**/*.js\""
   },
   "keywords": [],
   "author": "",

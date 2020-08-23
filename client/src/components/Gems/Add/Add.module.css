@@ -25,3 +25,9 @@
 }
 
 
+@media (min-width: 320px) and (max-width: 680px) {
+  .AddContent h1 {
+    font-size: 0.5rem;
+  }
+}
+

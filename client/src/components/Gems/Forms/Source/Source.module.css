@@ -1,7 +1,5 @@
 .sourceContent {
-  display: flex;
-  flex-direction: column;
-  margin: 1.5rem auto;
+  margin: 1rem auto;
   color: black;
   background: var(--alt-2-bg-color);
   padding: 4rem;
@@ -9,9 +7,6 @@
   box-shadow: 1px 1px 1px 1px black;
   width: 100%;
   animation: fadeIn 0.5s ease;
-}
-.sourceButton {
-  width: 500px;
 }
 
 @keyframes fadeIn {
