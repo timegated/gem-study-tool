@@ -5,6 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.config = void 0;
 const config = {
-  dbUrl: 'mongodb+srv://dbeccaria:kellogs13@cluster0.itfdp.mongodb.net/<dbname>?retryWrites=true&w=majority'
+  dbUrl: 'mongodb+srv://dbeccaria:gth8WDSzLu8kSAHY@cluster0.itfdp.mongodb.net/gem-db?retryWrites=true&w=majority'
 };
 exports.config = config;

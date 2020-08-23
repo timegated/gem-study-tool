@@ -7,6 +7,8 @@ exports.connect = void 0;
 
 var _mongoose = _interopRequireDefault(require("mongoose"));
 
+var _config = _interopRequireDefault(require("../config"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); if (enumerableOnly) symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; }); keys.push.apply(keys, symbols); } return keys; }
@@ -15,9 +17,11 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-const connect = (url = `mongodb+srv://dbeccaria:${process.env.DB_PW}@cluster0.itfdp.mongodb.net/<dbname>?retryWrites=true&w=majority`, opts = {}) => {
+const connect = (url = _config.default.dbURL, opts = {}) => {
   console.log('Mongodb connected');
   return _mongoose.default.connect(url, _objectSpread(_objectSpread({}, opts), {}, {
+    useCreateIndex: true,
+    useFindAndModify: true,
     useNewUrlParser: true,
     useUnifiedTopology: true
   }));

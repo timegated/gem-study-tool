@@ -1,12 +1,12 @@
 import mongoose from 'mongoose';
+import options from '../config';
 
-export const connect = (
-  url = `mongodb+srv://dbeccaria:${process.env.DB_PW}@cluster0.itfdp.mongodb.net/<dbname>?retryWrites=true&w=majority`,
-  opts = {}
-) => {
+export const connect = (url = options.dbURL, opts = {}) => {
   console.log('Mongodb connected');
   return mongoose.connect(url, {
     ...opts,
+    useCreateIndex: true,
+    useFindAndModify: true,
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });
