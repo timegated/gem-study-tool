@@ -4,8 +4,11 @@ import fs from 'fs';
 
 const getProperties = (el, arr) => {
   return el.map((item) => {
+    console.log(item.children[0].parent.attribs.href);
+    // console.log(item.children[0].href);
     arr.push({
       name: item.children[0].data,
+      href: item.children[0].parent.attribs.href,
     });
   });
 };
@@ -22,7 +25,7 @@ const getNonItalic = async () => {
     getProperties(gemLinks, gems);
     return gems;
   } catch (error) {
-    console.error('Error inside getNonItalic');
+    console.error('Error inside getNonItalic', error);
   }
 };
 
@@ -36,7 +39,6 @@ const getItalicGems = async () => {
     const $ = cheerio.load(req.body);
     const gemLinksItalic = $('ul>li>i>a').get();
     getProperties(gemLinksItalic, italicGems);
-    console.log(italicGems);
     return italicGems;
   } catch (error) {
     console.error('Error inside getItalicGems');
@@ -54,3 +56,4 @@ const saveJSON = async (fileName, data) => {
 console.log('Unresolved promise?', getNonItalic());
 
 saveJSON('gemdata_ni.json', getNonItalic());
+saveJSON('gemData_i.json', getItalicGems());
