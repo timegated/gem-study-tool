@@ -1,0 +1,25 @@
+.ExpoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Expo {
+  display: flex;
+  align-items: center;
+  width: 500px;
+  height: 20vh;
+  margin: 1rem auto;
+  text-align: left;
+}
+
+.Reverse {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  width: 500px;
+  height: 20vh;
+  margin: 1rem auto;
+  text-align: left;
+}

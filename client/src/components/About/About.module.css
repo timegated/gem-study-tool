@@ -1,0 +1,14 @@
+.AboutContent {
+  margin: 5rem auto;
+  max-width: 850px;
+  color: #220033;
+}
+
+.Title {
+  text-align: center;
+}
+
+.Reverse {
+  flex-direction: row-reverse;
+}
+
