@@ -27,11 +27,10 @@ const getNonItalic = async () => {
     const $ = _cheerio.default.load(req.body);
 
     const gemLinks = $('ul>li>a').get();
-    getProperties(gemLinks, gems); // console.log(gems);
-
+    getProperties(gemLinks, gems);
     return gems;
   } catch (error) {
-    console.error('Something bad happened with getNonItalic');
+    console.error('Error inside getNonItalic');
   }
 };
 
@@ -50,12 +49,17 @@ const getItalicGems = async () => {
     console.log(italicGems);
     return italicGems;
   } catch (error) {
-    console.error('Something bad happened with getItalicGems');
+    console.error('Error inside getItalicGems');
   }
 };
 
-const saveJSON = (fileName, data) => {
-  _fs.default.writeFileSync(`${__dirname}/../data/${fileName}`, JSON.stringify(data));
+const saveJSON = async (fileName, data) => {
+  try {
+    _fs.default.writeFileSync(`${__dirname}/${fileName}`, JSON.stringify(await data));
+  } catch (error) {
+    console.error(error);
+  }
 };
 
-saveJSON('gemdata_ni', getNonItalic());
+console.log('Unresolved promise?', getNonItalic());
+saveJSON('gemdata_ni.json', getNonItalic());
