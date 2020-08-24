@@ -1,17 +1,7 @@
 import request from 'requestretry';
 import cheerio from 'cheerio';
 import fs from 'fs';
-
-const getProperties = (el, arr) => {
-  return el.map((item) => {
-    console.log(item.children[0].parent.attribs.href);
-    // console.log(item.children[0].href);
-    arr.push({
-      name: item.children[0].data,
-      href: item.children[0].parent.attribs.href,
-    });
-  });
-};
+import { grabLinks } from '../../utils/grabLinks';
 
 const getNonItalic = async () => {
   try {
@@ -22,7 +12,7 @@ const getNonItalic = async () => {
     });
     const $ = cheerio.load(req.body);
     const gemLinks = $('ul>li>a').get();
-    getProperties(gemLinks, gems);
+    grabLinks(gemLinks, gems);
     return gems;
   } catch (error) {
     console.error('Error inside getNonItalic', error);
@@ -38,7 +28,7 @@ const getItalicGems = async () => {
     });
     const $ = cheerio.load(req.body);
     const gemLinksItalic = $('ul>li>i>a').get();
-    getProperties(gemLinksItalic, italicGems);
+    grabLinks(gemLinksItalic, italicGems);
     return italicGems;
   } catch (error) {
     console.error('Error inside getItalicGems');

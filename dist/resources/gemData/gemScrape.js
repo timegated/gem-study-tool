@@ -6,18 +6,9 @@ var _cheerio = _interopRequireDefault(require("cheerio"));
 
 var _fs = _interopRequireDefault(require("fs"));
 
+var _grabLinks = require("../../utils/grabLinks");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-const getProperties = (el, arr) => {
-  return el.map(item => {
-    console.log(item.children[0].parent.attribs.href); // console.log(item.children[0].href);
-
-    arr.push({
-      name: item.children[0].data,
-      href: item.children[0].parent.attribs.href
-    });
-  });
-};
 
 const getNonItalic = async () => {
   try {
@@ -30,7 +21,7 @@ const getNonItalic = async () => {
     const $ = _cheerio.default.load(req.body);
 
     const gemLinks = $('ul>li>a').get();
-    getProperties(gemLinks, gems);
+    (0, _grabLinks.grabLinks)(gemLinks, gems);
     return gems;
   } catch (error) {
     console.error('Error inside getNonItalic', error);
@@ -48,7 +39,7 @@ const getItalicGems = async () => {
     const $ = _cheerio.default.load(req.body);
 
     const gemLinksItalic = $('ul>li>i>a').get();
-    getProperties(gemLinksItalic, italicGems);
+    (0, _grabLinks.grabLinks)(gemLinksItalic, italicGems);
     return italicGems;
   } catch (error) {
     console.error('Error inside getItalicGems');
