@@ -1,15 +1,18 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import About from '../../About/About';
+import Title from '../../Layout/Titles/Titles';
 import styles from './Home.module.css';
 
 const Home = () => {
   return (
     <>
       <div className={styles.HomeContent}>
-        <h1 className={styles.Title}>Gem Study Tool</h1>
-        <div className={styles.InfoContainer}>
-          <h2 className={styles.InfoTitle}>Learn About Gems At Your Pace</h2>
+        {/* <h1 className={styles.Title}>Gem Study Tool</h1> */}
+        <Title elType="h1" text='Gem Tools' />
+        <div className={styles.TitleContainer}>
+          <Title elType="h2" text='Organize your information' />
+          <Title elType='h2' text='Save it for later'/>
         </div>
       </div>
       <About />

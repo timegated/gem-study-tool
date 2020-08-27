@@ -12,17 +12,23 @@ const About = () => {
         <h1 className={styles.Title}>How To:</h1>
       </div>
       <Expo reverse={true} image={gemImageOne} altText="Hexagon and pearl">
-        Let's say your studying gemology or working in the field of fine
-        gemstones.
+        <p className={styles.Paragraph}>
+          Let's say your studying gemology or working in the field of fine
+          gemstones.
+        </p>
       </Expo>
       <Expo image={gemImageTwo} altText="Sideways diamond">
-        You ultimately need a quick and easy to keep track of and access what
-        your studying in order to serve your clients or improve your overall
-        knowledge.
+        <p className={styles.Paragraph}>
+          You ultimately need a quick and easy to keep track of and access what
+          your studying in order to serve your clients or improve your overall
+          knowledge.
+        </p>
       </Expo>
       <Expo reverse={true} image={gemImageOne} altText="Hexagon and pearl">
-        And that's what this app is for. Keeping what you know organized and
-        easily accessible. Click 'Add' to get started.
+        <p className={styles.Paragraph}>
+          And that's what this app is for. Keeping what you know organized and
+          easily accessible. Click 'Add' to get started.
+        </p>
       </Expo>
     </>
   );

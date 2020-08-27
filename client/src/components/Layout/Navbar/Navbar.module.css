@@ -1,5 +1,11 @@
-  
-.header {
+.Cta {
+	background: #990099;
+	padding: 0.5rem 1rem 0.5rem 1rem;
+	border-radius: 10px;
+	color: #ebebeb !important;
+}
+
+.Header {
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -10,14 +16,14 @@
   font-family: 'Hammersmith One', sans-serif;
 }
 
-.header nav {
+.Header nav {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
 	font-size: 100%;
 }
 
-.header nav a {
+.Header nav a {
 	margin: 1rem 5rem 0 1rem;
 	font-size: 24px;
 	text-align: center;
@@ -25,14 +31,14 @@
 	color: var(--alt-font-color);
 }
 
-.header nav a:hover,
-.header nav a:active {
+.Header nav a:hover,
+.Header nav a:active {
 	color: #990099;
 	text-decoration: underline;
 }
 
 @media screen and (max-width: 480px) {
-	.header {
+	.Header {
 		display: none;
 		visibility: hidden;
 	}
