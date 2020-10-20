@@ -1,12 +1,11 @@
 .AboutContent {
   margin: 5rem auto;
-  max-width: 850px;
   color: #220033;
 }
 
 .Paragraph {
   padding: 0;
-  font-size: 18px;
+  font-size: 24px;
 }
 
 .Title {

@@ -1,26 +1,31 @@
 .ExpoContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 
 .Expo {
   display: flex;
   align-items: center;
-  max-width: 650px;
-  width: 550px;
-  height: 20vh;
-  margin: 1rem auto;
+  justify-content: space-around;
+  flex: 1 0 30%;
+  width: 46em;
   text-align: left;
+  padding: 2.5rem;
+  box-shadow: 1px 1px 3px var(--alt-font-color);
+  border-left: 5px solid var(--main-font-color);
 }
 
 .Reverse {
   display: flex;
+  flex: 1 0 30%;
+  width: 46em;
   flex-direction: row-reverse;
   align-items: center;
-  width: 500px;
-  height: 20vh;
+  padding: 2.5rem;
   margin: 1rem auto;
   text-align: left;
+  border-right: 5px solid var(--main-font-color);
+  box-shadow: 1px 1px 3px var(--alt-font-color);
 }

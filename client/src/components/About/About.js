@@ -19,9 +19,9 @@ const About = () => {
       </Expo>
       <Expo image={gemImageTwo} altText="Sideways diamond">
         <p className={styles.Paragraph}>
-          You ultimately need a quick and easy to keep track of and access what
-          your studying in order to serve your clients or improve your overall
-          knowledge.
+          You ultimately need a quick and easy way to keep track of and access
+          what your studying in order to serve your clients or improve your
+          overall knowledge.
         </p>
       </Expo>
       <Expo reverse={true} image={gemImageOne} altText="Hexagon and pearl">

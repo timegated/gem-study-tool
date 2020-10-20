@@ -9,10 +9,10 @@ const Home = () => {
     <>
       <div className={styles.HomeContent}>
         {/* <h1 className={styles.Title}>Gem Study Tool</h1> */}
-        <Title elType="h1" text='Gem Tools' />
+        <Title elType="h1" text="Gem Tools" />
         <div className={styles.TitleContainer}>
-          <Title elType="h2" text='Organize your information' />
-          <Title elType='h2' text='Save it for later'/>
+          <Title elType="h2" text="Organize your information" />
+          <Title elType="h2" text="Save it for later" />
         </div>
       </div>
       <About />
