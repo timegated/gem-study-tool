@@ -1,6 +1,6 @@
 .TitleOne {
   text-align: center;
-  color: #990099;
+  color: var(--alt-font-color);
   font-size: 5em;
 }
 

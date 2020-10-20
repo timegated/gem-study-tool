@@ -11,9 +11,9 @@
 	top: 0;
 	width: 100%;
 	padding: 0;
-	background: transparent;
+	background-color: transparent;
   z-index: 50;
-  font-family: 'Hammersmith One', sans-serif;
+	font-family: 'Hammersmith One', sans-serif;
 }
 
 .Header nav {

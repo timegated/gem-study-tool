@@ -8,7 +8,6 @@ const Home = () => {
   return (
     <>
       <div className={styles.HomeContent}>
-        {/* <h1 className={styles.Title}>Gem Study Tool</h1> */}
         <Title elType="h1" text="Gem Tools" />
         <div className={styles.TitleContainer}>
           <Title elType="h2" text="Organize your information" />
