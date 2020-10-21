@@ -17,10 +17,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
-console.log(_config.default.dbUrl);
-
 const connect = (url = _config.default.dbUrl, opts = {}) => {
-  console.log(typeof url);
   console.log('Mongodb connected');
   return _mongoose.default.connect(url, _objectSpread(_objectSpread({}, opts), {}, {
     useCreateIndex: true,

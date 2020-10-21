@@ -1,4 +1,5 @@
+import dotenv from 'dotenv';
+
 export const config = {
-  dbUrl:
-    'mongodb+srv://dbeccaria:8gu5IwXkMi2NUsnq@cluster0.itfdp.mongodb.net/gem-db?retryWrites=true&w=majority',
+  dbUrl: process.env.MONGODB_URI || dotenv.config().parsed.MONGODB_URI,
 };
